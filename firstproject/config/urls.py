@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import Landing.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('landing',Landing.views.index,name="index") # http://localhost:8000/landing 진입시 페이지 보여주기
 ]
+
